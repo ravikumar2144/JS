@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <script src="cookies.js"></script> -->
+        <!-- <script src="sessionStorage.js"></script> -->
+        <script>
+        // localStorage.setItem("name", "vasanth");
+
+        var obj = {name:"Vasanth"}
+        var obj1 = {name1:"Vasanth"}
+        var obj2 = {name2:"Vasanth"}  
+        // sessionStorage.setItem("ss",JSON.stringify(obj));
+        // sessionStorage.setItem("ss1",JSON.stringify(obj1));
+        // sessionStorage.setItem("ss2",JSON.stringify(obj2));
+        sessionStorage.setItem("ss",obj);
+        sessionStorage.setItem("ss1",obj);
+        sessionStorage.setItem("ss2",obj);
+        console.log(sessionStorage.getItem("ss"),sessionStorage.getItem("ss1"),sessionStorage.getItem("ss2"));
+        // let a = JSON.parse(sessionStorage.getItem("ss"))
+        // let b = JSON.parse(sessionStorage.getItem("ss1"))
+        // let c = JSON.parse(sessionStorage.getItem("ss2"))
+        // sessionStorage.removeItem("myn")
+        // sessionStorage.clear();
+        // console.log(a,b,c);
+
+
+
+        // localStorage example
+// localStorage.setItem('username', 'JohnDoe');
+// console.log(localStorage.getItem('username')); // Outputs: JohnDoe
+// localStorage.removeItem('username');
+// localStorage.clear();
+
+// sessionStorage example
+// sessionStorage.setItem('sessionID', 'abc123');
+// console.log(sessionStorage.getItem('sessionID')); // Outputs: abc123
+// sessionStorage.removeItem('sessionID');
+// sessionStorage.clear();
+    </script>
+    </body>
+</html>

@@ -1,0 +1,387 @@
+2015 ES(Ecma script)6 introduce ->  let , const
+
+
+
+Head        :    <head>
+                    <script src="sample.js"></script>
+                 </head>
+
+Body        :    <body>
+                    <script src="sample.js"></script>
+                 </body>
+
+External    :    <script src="sample.js"> </script>
+
+Comment :
+
+    1. Single line Comment  -  //
+
+    2. Mulitiline comment   -  /* */
+
+
+Datatypes :
+
+    1. Primitive datatype - numbers,strings,boolean,null,undefined
+    2. Non primitive  - objects,arrays
+
+*null is object
+
+Variables :
+
+*reserved words are not used as Variables
+
+    var - global scope   -->  can redeclare/reassign  
+    let - local scope  --> cannot redeclare , can reassign
+    const - local scope --> cannot redeclare/reassign
+
+String :
+    
+        let var = 'name'
+        let var1 = "name"
+        let var2 = `name`
+
+``   -  console.log(`my name is ${var2}`)
+
+
+Object :
+
+        Collection of data
+
+    var name = {
+    first: 'John'      -->   key: value 
+    }
+
+    NESTED OBJECT :
+
+            var name = { 
+                        name: 'John' , 
+                        status : {
+                                    role: 'IT', 
+                                    skills:{ 
+                                             ml : 'C' , script: 'JS'
+                                           }
+                                  }
+                        };
+
+for in loop  -->   Iterate the data of object
+
+    var myname = {
+    first: 'John',
+    last: 'Doe' 
+    }
+    for(let val in myname){
+    console.log(val);
+    }
+
+    for(let val in myname){
+    console.log(myname[val]);
+    }
+
+
+for of loop --> Iterate the arrays and strings
+
+    let arr = ["vasanth","mahesh"]
+    for(let val of arr)
+    {
+        console.log(val);
+    }
+
+    let str = "vasanth"
+    for(let val of str)
+    {
+        console.log(val);   
+    }
+
+*************************************************************
+
+
+Functions :
+
+    function func_name(){
+
+    }
+
+Function expression :
+
+    Declare a function in Variable
+
+    let func = function add()
+    {
+        let id = 1;
+        return id;
+    }
+    console.log(func());
+
+Anonymous function :
+
+    let func = function add(a,b)
+    {
+        return a*b;
+    }
+    let func1=func(2,3)
+    console.log(func1);
+
+
+Hoisting :
+
+    Call a function before/after the function is declared
+
+    fname("Hoisting");   
+    function fname(a)
+    {
+        console.log(a);
+    }
+
+Variable hoisting :
+
+    console.log(var);     -->  undefined
+    var id=1;
+    console.log(var)      -->  1
+
+***********************************************************
+
+Events :
+
+    Change in state of object
+
+SYNTAX:
+single qoute  :  <tagname event='func()'>
+double quote  :  <tagname event="func()">
+
+EX:     <button onclick='click()'>
+
+getElementById :     -->   document.getElementById("id").innerHTML="Hi"
+
+    document.getElementById("button1").innerHTML="Afterclicked"
+    
+
+    var but1 = document.getElementById("button1");
+    but1.innerHTML="Afterclicked 1";
+
+
+    addEventListener :   -->   document.getElementById("id").addEventListener("Event",function_name);
+
+        Inbuilt function of JS
+        One element may contain multiple EventListeners and it will not be overwritten.
+
+
+        document.getElementById("button1").addEventListener("click", clk)
+
+        var but2= document.getElementById("button1")
+        but2.addEventListener("click", clk);
+
+UseCapture :
+
+    default value : false
+
+    Two types :
+
+        Capturing : true       
+        Bubbling  : false
+
+
+Cookies :   (Storage : 4kb)
+
+    Store your minimal information in web browser or page
+    Stores the sensitive data
+
+    SYNTAX :
+
+            document.cookie = "key = value; expires=date & time(UTC);domain = domain name;path=/";
+            document.cookie = "key = value; max-age=Time in seconds;domain = domain name;path=/"; 
+
+
+SESSION STORAGE :    (Storage 5-10mb)
+
+    object model - key : value
+    Once Browser closed - sessionStorage will be deleted
+    
+    SYNTAX :
+
+            window.sessionStorage / sessionStorage
+            sessionStorage.setItem(key,value)
+            sessionStorage.getItem(key)
+
+
+
+            *******************************************
+
+
+var obj = {name:"Vasanth"}                                      |                                      
+sessionStorage.setItem("myn",obj);                              |-->  [object object]
+console.log(sessionStorage.getItem("myn"));                     |
+
+
+** JSON.stringify()  -->  object to string
+
+var obj = {name:"Vasanth"}
+
+sessionStorage.setItem("myn",JSON.stringify(obj));
+
+console.log(sessionStorage.getItem("myn"));
+
+
+**  JSON.parse()      -->  String to object
+
+var obj = {name:"Vasanth"}
+
+sessionStorage.setItem("myn",JSON.stringify(obj));
+
+console.log(JSON.parse(sessionStorage.getItem("myn")));
+
+
+        **************************************************
+
+sessionStorage.removeItem("key")
+sessionStorage.clear();
+
+
+
+LOCAL STORAGE : (Storage 5-10mb)
+
+    Dont get expired until we manually deleted
+    Access in all pages
+    Long term purpose - Non sensitive content
+
+**********************************************
+
+
+
+PAGE REDIRECTION : 
+
+
+        Reload :
+
+            window.location.reload() /  location.reload()    -->    Reload page continously
+
+        SetTime for reload :
+
+            setTimeout(() => {
+
+            }, timeout);                -->  timeout in miliseconds (1sec-1000ms)
+        
+
+        console.log(window.location);     -->   Show page details
+
+        window.location.replace("url");      -->   page that clears the previous page
+
+        
+DIALOG BOX :
+
+        Alert BOX         -->  alert()
+        Confirmation BOX  -->  confirm()
+        Prompt BOX        -->  prompt()
+
+
+******************************************************
+
+CONSTRUCTOR :
+
+        function con()
+        {
+            this.name = "Vasanth";
+            this.age = 23;
+        }
+
+        var cons = new con();
+
+object.keys(objname);
+object.values(objname);
+
+
+let obj = Object.create(objname)    -->  inherit objname to obj 
+
+
+***********************************************
+
+
+
+MAP  :
+
+       Syntax : arrayName.map(functionName)
+
+
+var arr1 = [0,1,2,3,4];
+var arr2 = arr1.map(add);
+function add(value)
+{
+    return value*10
+}
+console.log(arr2);
+
+
+
+Array.isArray(variableName)  :  Returns true/false  
+
+var arr1 = [0,1,2,3,4];
+console.log(Array.isArray(arr1));
+
+
+arr1.reverse()     :   Reverse the array
+
+var arr1 = [0,1,2,3,4];
+console.log(arr1.reverse());
+
+
+
+MATH :
+
+    To perform mathematical operations
+
+
+JSON :   JS Object Notation
+
+    Send data from server to client
+    Derived from JS, resembled by object literals
+    Accessed and created by other programming languages too(json format)
+    Cannot contain Functions
+
+
+DOM :
+
+    document.forms["formname"]["inputName"].value
+
+
+BOM :  Browser Object model
+
+    window.innerWidth 
+    window.innerHeight
+    window.open(url)
+    window.close()  --> Close the current tab
+    window.history.back()
+    window.history.forward()
+    window.alert
+    window.prompt
+    window.confirm
+
+    Navigator :
+
+        Navigator.online
+
+
+Logical errors :
+
+    Latest version of JS
+    user defined exceptions or runtime exceptions => catch
+    Cannot catch the JS syntax error
+
+    try...catch...finally :
+
+        try{
+                //code
+        }
+        catch{
+                //code
+        }   
+        finally{
+                //optional
+        }
+
+
+JS Asynchronous :
+
+    setTimeout
+    callback function   -->   call a funtion as argument in other function
+    promise        -->   pending , fulfilled(resolve) , rejected 
+    Async-await
+    settimeInterval

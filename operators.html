@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators...</title>
+  </head>
+  <body>
+    <script>
+      //Arithmetic
+      let a = 10;
+      let b = 5;
+
+      console.log("Addition: " + (a + b)); // 15
+      console.log("Subtraction: " + (a - b)); // 5
+      console.log("Multiplication: " + a * b); // 50
+      console.log("Division: " + a / b); // 2
+      console.log("Modulus: " + (a % b)); // 0
+      console.log("Exponentiation: " + a ** b); // 100000
+      
+      //comparision
+      let x = 10;
+      let y = 20;
+
+      console.log("Equal: " + (x == y)); // false
+      console.log("Not equal: " + (x != y)); // true
+      console.log("Strict equal: " + (x === y)); // false
+      console.log("Strict not equal: " + (x !== y)); // true
+      console.log("Greater than: " + (x > y)); // false
+      console.log("Less than: " + (x < y)); // true
+      console.log("Greater than or equal: " + (x >= y)); // false
+      console.log("Less than or equal: " + (x <= y)); // true
+      
+      //logical
+      let p = true;
+      let q = false;
+
+      console.log("AND: " + (p && q)); // false
+      console.log("OR: " + (p || q)); // true
+      console.log("NOT: " + !p); // false
+      
+      //assignment
+      let num = 10;
+
+      num += 5; // num = num + 5
+      console.log("Addition assignment: " + num); // 15
+
+      num -= 3; // num = num - 3
+      console.log("Subtraction assignment: " + num); // 12
+
+      num *= 2; // num = num * 2
+      console.log("Multiplication assignment: " + num); // 24
+
+      num /= 4; // num = num / 4
+      console.log("Division assignment: " + num); // 6
+
+      num %= 3; // num = num % 3
+      console.log("Modulus assignment: " + num); // 0
+
+      num **= 2; // num = num ** 2
+      console.log("Exponentiation assignment: " + num); // 0
+
+      //bitwise
+      let m = 5; // 0101 in binary
+      let n = 3; // 0011 in binary
+
+      console.log("Bitwise AND: " + (m & n)); // 1 (0001)
+      console.log("Bitwise OR: " + (m | n)); // 7 (0111)
+      console.log("Bitwise XOR: " + (m ^ n)); // 6 (0110)   0 0 - 0 / 1 1 - 0
+      console.log("Bitwise NOT: " + ~m); // -6 (inverts bits)
+      console.log("Left shift: " + (m << 1)); // 10 (1010)  add 0 on right
+      console.log("Right shift: " + (m >> 1)); // 2 (0010)  remove
+    </script>
+  </body>
+</html>

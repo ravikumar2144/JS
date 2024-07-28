@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flow Control Statements...</title>
+  </head>
+  <body>
+    <script>
+      //if
+      let x = 10;
+      if (x > 5) {
+        console.log("x is greater than 5");
+      }
+
+
+
+      //elseif
+      let y = 10;
+      if (y < 5) {
+        console.log("y is less than 5");
+      } else if (y > 5) {
+        console.log("y is greater than 5");
+      } else {
+        console.log("y is equal to 5");
+      }
+
+
+
+      //nestedif
+      let z = 20;
+      if (z > 10) 
+      {
+        if (z < 30) 
+        {
+          console.log("z is between 10 and 30");
+        } 
+        else 
+        {
+          console.log("z is 30 or more");
+        }
+      } 
+      else 
+      {
+        console.log("z is 10 or less");
+      }
+
+
+
+      //switch
+      let fruit = "apple";
+      switch (fruit) {
+        case "apple":
+          console.log("It's an apple");
+          break;
+        case "banana":
+          console.log("It's a banana");
+          break;
+        default:
+          console.log("Unknown fruit");
+      }
+
+
+
+      //nested switch
+      let color = "red";
+      let shade = "dark";
+      switch (color) {
+        case "red":
+          switch (shade) {
+            case "dark":
+              console.log("It's a dark red");
+              break;
+            case "light":
+              console.log("It's a light red");
+              break;
+            default:
+              console.log("Unknown shade of red");
+          }
+          break;
+        case "blue":
+          console.log("It's blue");
+          break;
+        default:
+          console.log("Unknown color");
+      }
+
+
+
+      //while
+      let j = 0;                          // intialization
+      while (j < 5) {                     // condition
+        console.log("j is " + j);
+        j++;                              // increment/decrement
+      } 
+
+
+      //do...while
+      let k = 0;                          // intialization
+      do {
+        console.log("k is " + k);
+        k++;                              // increment/decrement
+      } while (k < 5);                    //condition
+
+
+
+      //forloop
+      for (let i = 0; i < 5; i++) {       // intialization ; condition ; increment/decrement
+        console.log("i is " + i);
+      }
+
+
+
+      let number = 0;
+      if(number>0){
+        console.log(number," is Postive");
+      }
+      else if(number == 0){
+        console.log("Zero");
+      }
+      else{
+        console.log(number," is Negative");
+      }
+      
+    </script>
+  </body>
+</html>
